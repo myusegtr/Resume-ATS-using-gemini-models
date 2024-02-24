@@ -1,105 +1,54 @@
-## Getting started with projects related to gemini-pro & gemini-pro-vision models.
+# Resume Tracking LLM app
 
-## 1. A simple health app using gemini.
+## Aim of Project
 
-### Health Checker App
+The aim of this project is to develop an Intelligent Resume Application Tracking System (ATS) using Streamlit and Google's Generative AI models. The system aims to assist job seekers in improving their resumes by providing tailored feedback based on job descriptions, evaluating the match percentage, and identifying missing keywords.
 
-#### Aim of Project
-The aim of this project is to build a health checker app using a generative AI model. The app allows users to input a prompt related to nutrition, upload an image containing food items, and receive a response that includes the calorie count for individual food items in the image.
+## Steps involved
 
-#### Steps Involved
-##### Setting Up Environment:
-The project uses Streamlit for building the web app interface.
-It integrates with the Google Generative AI API for generating responses based on user input and uploaded images.
+ #### Setup Environment: 
+ Load necessary libraries and configure environment variables using .env files.
 
-##### Getting Model Response:
-The get_gemini_repsonse function is defined to interact with the generative AI model ('gemini-pro-vision') and obtain responses based on the provided input, image, and prompt.
+#### Text Extraction from PDF:
+Extract text from the uploaded PDF resume using PyPDF2 library.
+Generate Prompt: Construct a prompt template for the Generative AI model, incorporating job description and resume text.
 
-##### Image Processing:
-The input_image_setup function processes the uploaded image file, converting it into bytes and extracting necessary information such as MIME type.
+#### Model Interaction: 
+Utilize Google's Generative AI models (Gemini-pro and Gemini-pro-vision) to generate responses based on the provided input.
 
-##### Streamlit Interface:
-The Streamlit app interface is set up to take user input for the prompt and allow image upload.
-Users can input a prompt related to food items and upload an image containing those items.
+#### Streamlit Application: 
+Develop a user-friendly interface using Streamlit for users to input job descriptions, upload resumes, and trigger the analysis process.
 
-##### Response Display:
-Upon clicking the "Calories count" button, the app sends the input, image, and prompt to the generative AI model and displays the response, which includes the estimated calorie count for individual food items.
+#### Feedback Display: 
+Present the generated responses to users, providing insights on resume improvements, matching percentage, and missing keywords.
 
-#### Tools/Technologies Required
-Python
-Streamlit
-Google Generative AI API
-Pillow (PIL) for image processing
-Python-dotenv for environment variable management
 
-#### Conclusion
-The health checker app provides a simple and interactive way for users to inquire about the calorie count of food items in an image. It leverages generative AI to generate responses based on the user's input and the content of the uploaded image.
+## Tools/Tech Stack Required
 
-#### What Extra Can Be Done in This Project
+Python: Programming language used for backend logic.
+Streamlit: Framework for building interactive web applications.
+PyPDF2: Library for extracting text from PDF documents.
+Google's Generative AI: AI models used for generating responses based on input.
+python-dotenv: Library for loading environment variables from .env files.
 
-##### Enhanced Image Recognition:
-Explore and implement advanced image recognition techniques to identify and classify food items more accurately.
-##### Extended Nutrition Information:
-Extend the app to provide additional nutritional information for each food item, such as macronutrients and micronutrients.
-##### User Authentication:
-Implement user authentication to personalize the experience and save the history of queries.
-##### Mobile App Development:
-Consider expanding the app to a mobile platform to increase accessibility.
-##### Feedback Mechanism:
-Incorporate a feedback mechanism to improve the model's accuracy based on user feedback.
 
-## 2. Invoice generator app using gemini llm
+## Conclusion
 
-### MultiLanguage Invoice Extractor
+This project offers a user-friendly solution for job seekers to enhance their resumes by leveraging AI-driven analysis. By providing tailored feedback, matching percentage, and highlighting missing keywords, the system assists users in optimizing their job applications and improving their chances in the competitive job market.
 
-#### Aim of Project
-The goal of this project is to create a MultiLanguage Invoice Extractor using generative AI. The application allows users to input a prompt related to invoice details, upload an image containing an invoice, and receive a response that includes extracted information from the invoice.
+## What Extra Can Be Done in This Project
 
-#### Steps Involved
+#### Enhanced Resume Analysis: 
+Integrate more sophisticated AI models for deeper resume analysis, such as sentiment analysis, skills matching, and semantic understanding.
 
-##### Setting Up Environment:
-The project uses Streamlit for building the web app interface.
-It integrates with the Google Generative AI API for generating responses based on user input and uploaded invoice images.
+#### User Authentication: 
+Implement user authentication to personalize the feedback and store previous analysis results securely.
 
-##### Loading Gemini Pro Vision Model:
-The GenAI library is used to configure and load the 'gemini-pro-vision' generative model.
+#### Resume Template Suggestions: 
+Provide suggestions for resume templates based on the job description and industry standards.
 
-##### Getting Gemini Response:
-The get_gemini_response function interacts with the generative AI model to obtain responses based on the provided input, image, and user prompt.
+#### Integration with Job Portals: 
+Integrate with job portals to directly fetch job descriptions and streamline the analysis process.
 
-##### Image Processing:
-The input_image_details function processes the uploaded invoice image file, converting it into bytes and extracting necessary information such as MIME type.
-
-##### Streamlit Interface:
-The Streamlit app interface is set up to take user input for the prompt and allow image upload.
-Users can input a prompt related to invoices and upload an image containing the invoice.
-
-##### Response Display:
-Upon clicking the "For invoice details...click here" button, the app sends the input, image, and prompt to the generative AI model and displays the response, which includes extracted details from the invoice.
-
-#### Tools/Technologies Required
-Python
-Streamlit
-Google Generative AI API
-Pillow (PIL) for image processing
-Python-dotenv for environment variable management
-
-#### Conclusion
-The MultiLanguage Invoice Extractor provides an interactive way for users to inquire about details present in an invoice image. It utilizes generative AI to generate responses based on the user's input and the content of the uploaded invoice image.
-
-#### What Extra Can Be Done in This Project
-
-##### Multilingual Support:
-Enhance the application to support a wider range of languages for invoice details extraction.
-
-##### Additional Invoice Details:
-Extend the app to extract additional details from invoices, such as due dates, itemized lists, and payment information.
-
-##### User Feedback Mechanism:
-Implement a feedback mechanism to improve the model's accuracy based on user corrections or validations.
-
-##### Integration with OCR Libraries:
-Integrate Optical Character Recognition (OCR) libraries to improve the accuracy of text extraction from invoice images.
-
-###### Automated Testing:
-Implement automated testing to ensure the reliability of the invoice extraction functionality.
+#### Natural Language Processing (NLP) Enhancements: 
+Incorporate advanced NLP techniques for better understanding of job descriptions and resumes, enabling more accurate matching and recommendations.
